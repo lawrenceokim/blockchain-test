@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          "flex flex-col w-screen h-full overflow-x-hidden bg-gradient-to-b from-[#0b0c58] to-[#040527] text-white"
+          "flex flex-col w-screen h-screen overflow-hidden bg-gradient-to-br from-950 to-black text-50 p-3"
         }
       >
         <Navbar />
