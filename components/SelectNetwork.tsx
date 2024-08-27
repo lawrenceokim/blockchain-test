@@ -7,7 +7,7 @@ function SelectNetwork() {
         Network
       </button>
 
-      <div className="absolute top-16 flex flex-col gap-2 w-40 p-2 bg-200 rounded-xl">
+      <div className="absolute top-16 right-0 flex flex-col gap-2 w-40 p-2 bg-200 rounded-xl">
         <button className="text-base font-medium w-full bg-gradient-to-br from-950 to-black hover:bg-600 py-2 rounded-lg">
           Arbitrum
         </button>
