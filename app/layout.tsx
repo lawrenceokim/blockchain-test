@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StoreProvider from "./StoreProvider";
+import WagmiProviderContainer from "./WagmiProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +25,10 @@ export default function RootLayout({
           "flex flex-col w-screen h-screen overflow-hidden bg-gradient-to-br from-950 to-black text-50 p-3"
         }
       >
-        <Navbar />
-        <StoreProvider>{children}</StoreProvider>
+        <WagmiProviderContainer>
+          <Navbar />
+          <StoreProvider>{children}</StoreProvider>
+        </WagmiProviderContainer>
       </body>
     </html>
   );
