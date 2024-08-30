@@ -1,5 +1,5 @@
-import Web3 from "web3";
-import { erc20ABI } from "wagmi";
+// import Web3 from "web3";
+// import { erc20ABI } from "wagmi";
 
 export default function useGetBal() {
   const getBal = async (address, tokenAdd) => {

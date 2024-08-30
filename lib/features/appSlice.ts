@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import {
-  // mainnet,
-  optimism,
-  bsc,
-  arbitrum,
-  avalanche,
-  // fantom,
-  polygon,
-  goerli,
-  // moonbeam,
-} from "wagmi/chains";
+// import {
+//   // mainnet,
+//   optimism,
+//   bsc,
+//   arbitrum,
+//   avalanche,
+//   // fantom,
+//   polygon,
+//   goerli,
+//   // moonbeam,
+// } from "wagmi/chains";
 
 import arbitrumLogo from "@/public/network/arbitrum-logo.png.png";
 import sepoliaLogo from "@/public/network/gnosis-logo.png.png";
@@ -33,12 +33,12 @@ interface AppState {
 const initialState: AppState = {
   chains: [
     // { chainName: "Select chain", logo: mainnetLogo, chain: "select chain" },
-    { chainName: "Arbitrum", logo: arbitrumLogo, chain: arbitrum },
-    { chainName: "BSC", logo: bnbLogo, chain: bsc },
-    { chainName: "Goerli", logo: sepoliaLogo, chain: goerli },
-    { chainName: "Polygon", logo: polygonLogo, chain: polygon },
-    { chainName: "Optimism", logo: optimismLogo, chain: optimism },
-    { chainName: "Avalanche", logo: avalancheLogo, chain: avalanche },
+    // { chainName: "Arbitrum", logo: arbitrumLogo, chain: arbitrum },
+    // { chainName: "BSC", logo: bnbLogo, chain: bsc },
+    // { chainName: "Goerli", logo: sepoliaLogo, chain: goerli },
+    // { chainName: "Polygon", logo: polygonLogo, chain: polygon },
+    // { chainName: "Optimism", logo: optimismLogo, chain: optimism },
+    // { chainName: "Avalanche", logo: avalancheLogo, chain: avalanche },
     // { chainName: "Fantom", logo: fantomLogo, chain: fantom },
     // { chainName: "Moonbeam", logo: sepoliaLogo, chain: moonbeam },
   ],
@@ -97,7 +97,7 @@ const appSlice = createSlice({
       return { ...state, showSwitchNetwork: action.payload };
     },
     updateSelectedChain: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       return { ...state, selectedChain: action.payload };
     },
     updateCurrentAcc: (state, action) => {
