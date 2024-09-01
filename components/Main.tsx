@@ -15,6 +15,7 @@ interface Token {
 
 function Main() {
   const [tokensA, setTokensA] = useState<Token[]>([]);
+  const [tokensB, setTokensB] = useState<Token[]>([]);
 
   const [isSwapDisabled, setIsSwapDisabled] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
@@ -43,6 +44,30 @@ function Main() {
       }
     };
     fetchTokensA();
+  }, []);
+
+  useEffect(() => {
+    const fetchTokensB = async () => {
+      setIsFetchingTokensB(true);
+      try {
+        const response = await axios.get(
+          "https://backendlayerdapp.onrender.com/getTokens"
+        );
+        console.log(response);
+        // const result = Object.entries(response.data.tokens);
+        // const tokensArray = result.map((address, tokenDetails) => ({
+        //   ...tokenDetails,
+        //   address,
+        // }));
+        // console.log("TokenB list", tokensArray);
+        // setTokensB(tokensArray);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsFetchingTokensB(false);
+      }
+    };
+    fetchTokensB();
   }, []);
 
   return (
