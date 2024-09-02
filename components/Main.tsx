@@ -29,7 +29,7 @@ function Main() {
         const response = await axios.get(
           "https://backendlayerdapp.onrender.com/getTokens"
         );
-        console.log(response);
+        // console.log(response);
         // const result = Object.entries(response.data.tokens);
         // const tokensArray = result.map((address, tokenDetails) => ({
         //   ...tokenDetails,
@@ -54,12 +54,13 @@ function Main() {
           "https://backendlayerdapp.onrender.com/getTokens"
         );
         console.log(response);
-        // const result = Object.entries(response.data.tokens);
-        // const tokensArray = result.map((address, tokenDetails) => ({
-        //   ...tokenDetails,
-        //   address,
-        // }));
-        // console.log("TokenB list", tokensArray);
+        const result = Object.entries(response.data.tokens);
+        console.log(result);
+        const tokensArray = result.map((address, tokenDetails) => ({
+          address,
+          tokenDetails,
+        }));
+        console.log("TokenB list", tokensArray);
         // setTokensB(tokensArray);
       } catch (error) {
         console.error(error);
