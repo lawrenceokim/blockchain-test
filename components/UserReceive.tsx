@@ -7,7 +7,7 @@ function UserReceive() {
       <div className="flex items-center justify-between gap-2 w-full">
         <span className="text-950 w-[70%] py-5 rounded-xl bg-200"></span>
         <span className="flex items-center justify-center w-[30%] py-2 rounded-xl bg-500 hover:bg-600">
-          token
+          tokens
         </span>
       </div>
     </div>

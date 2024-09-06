@@ -6,7 +6,7 @@ function UserPay() {
       <h1 className="text-3xl font-semibold">You pay</h1>
       <div className="flex items-center justify-between gap-2 w-full">
         <button className="flex items-center justify-center w-[30%] py-2 rounded-xl bg-500 hover:bg-600">
-          token
+          tokens
         </button>
         <input className="text-950 w-[70%] p-2 outline-none rounded-xl bg-200" />
       </div>
