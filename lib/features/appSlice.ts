@@ -45,7 +45,7 @@ const initialState: AppState = {
   wallet: { account: null, connected: null }, // connected: currently connected chain
   selectedChain: {},
   showSwitchNetwork: false, // Boolean for if the show switch network notification should show
-  connectWallet: false,
+  connectWallet: true,
   notifications: [
     // {
     //   header: "Some Error", // just like header or title text can be ommitted
